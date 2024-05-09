@@ -8,7 +8,7 @@ class Car{
     }
 
     toggleAvailability(){
-if(this.isAvailable > 0 ){
+if(this.isAvailable ==1 ){
     console.log('The car is available')
 }
 else{
@@ -32,7 +32,7 @@ class Rental{
     }
 };
 
-const car = new Car("Ford", 'Ranger', 2008, 2);
+const car = new Car("Ford", 'Ranger', 2008, 1);
 car.toggleAvailability();
 console.log({car});
 
@@ -73,7 +73,7 @@ class Quiz {
     nextQuestion(){
         this.currentQuestionIndex++;
     }
-    submitAnswer(userAnswer){
+    submitAnswer(){
         const currentQuestion = this.questions[this.currentQuestionIndex];
         if(currentQuestion.checkAnswer()){
             this.score++;
